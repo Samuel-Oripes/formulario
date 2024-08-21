@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+
+body{
+    background-color: #E0F1E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-formulario{
+    background-color: white;
+    padding: 40px;
+    width: 736px;
+    margin: 40px 0;
+}
+
+.titulo{
+    color: #2A4144;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+    font-size: 32px;
+}
+
+label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.div-input-selecionar{
+    border: 1px solid;
+}
+
+.obrigatorio{
+    color: #0C7D69;
+}
+
+.inputs{
+    width: 100%;
+    height: 51px;
+    border-radius: 8px;
+    border: 1px solid #86A2A5;
+    margin: 8px 0;
+    padding-left: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.inputs:hover{
+    border-color: #0C7D69;
+}
+
+.input-email{
+    width: 100%;
+    height: 51px;
+    border-radius: 8px;
+    border: 1px solid #86A2A5;
+    margin: 8px 0;
+    padding-left: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.label-email{
+    margin-bottom: 24px;
+}
+
+.input-email:hover{
+    border-color: #0C7D69;
+}
+
+.div-input-selecionar{
+    width: 100%;
+    height: 51px;
+    border-radius: 8px;
+    border: 1px solid #86A2A5;
+    margin: 8px 0 24px;
+    display: flex;
+    align-items: center;
+    padding-left: 26.25px;
+    gap: 14.25px;
+}
+
+#label-suporte{
+    margin: 0 0 8px;
+}
+
+#div-label-consulta{
+    margin-bottom: 24px;
+}
+
+.div-input-selecionar:hover{
+    border-color: #0C7D69;
+}
+
+.input-selecionar{
+    appearance: none;
+    width: 19.5px;
+    height: 19.5px;
+    opacity: 0.5;
+    border: #86A2A5 solid 2px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-selecionar:checked{
+    border: #0C7D69 solid;
+    opacity: 1;
+}
+
+.input-selecionar::before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #0C7D69;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.input-selecionar:checked::before{
+    opacity: 1;
+}
+
+.tipo-de-consulta{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+textarea{
+    width: 100%;
+    height: 105px;
+    border: 1px #86A2A5 solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 8px 0 0;
+    resize: none;
+    padding: 15px;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.div-label-textarea{
+    margin-bottom: 24px;
+}
+
+textarea:hover{
+    border-color: #0C7D69;
+}
+
+.input-aceito-contato{
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    margin-right: 19px;
+    border: #86A2A5 solid 2px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-aceito-contato::before{
+    content: "";
+    height: 7px;
+    width: 3px;
+    border-bottom: #FFFFFF solid 2px;
+    border-right: #FFFFFF solid 2px;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+    opacity: 0;
+}
+
+.input-aceito-contato:checked:before{
+    opacity: 1;
+}
+
+.input-aceito-contato:checked{
+    background-color: #0C7D69;
+    border: none;
+}
+
+.label-checkbox{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+button{
+    width: 100%;
+    height: 59px;
+    background-color: #0C7D69;
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+
+button:hover{
+    background-color: #2A4144;
+    transition: 0.5s ease-in-out;
+}
+
+.div-input-pareado{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.div-input-nomes{
+    width: 100%;
+}
+
+.paragrafo-alerta-nome,.paragrafo-alerta-sobrenome,.paragrafo-alerta-email,.paragrafo-alerta-consulta,.paragrafo-alerta-textarea,.paragrafo-alerta-checkbox{
+    display: none;
+    color: #D94747;
+}
+
+@media screen and (max-width:800px) and (min-width:581px){
+
+.div-formulario{
+    width: 90vw;
+}
+}
+
+@media screen and (max-width:580px){
+
+.div-input-pareado{
+    flex-direction: column;
+}
+
+.div-formulario{
+    width: 95vw;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#label-suporte{
+    margin: 24px 0 8px;
+}
+
+#label-inquerito{
+    margin: 8px 0 0;
+}
+
+#inputs-nomes{
+    gap: 24px;
+}
+}

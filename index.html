@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="get" action="" onsubmit="enviadoComSucesso()">
+        <div class="div-formulario">
+            <h1 class="titulo">Fale Conosco</h1>
+            <div id="inputs-nomes" class="div-input-pareado">
+                <div class="div-input-nomes">
+                    <label>
+                        Nome <span class="obrigatorio">*</span>
+                        <br>
+                        <input onblur="inputNomeVasio()" id="input-primeiro-nome" type="text" class="inputs" required>
+                        <p class="paragrafo-alerta-nome">Este campo é obrigatório</p>
+                    </label>
+                </div>
+                <div class="div-input-nomes">
+                    <label>
+                        Sobrenome <span class="obrigatorio">*</span>
+                        <br>
+                        <input onblur="inputSobrenomeVasio()" id="input-segundo-nome" type="text" class="inputs" required>
+                        <p class="paragrafo-alerta-sobrenome">Este campo é obrigatório</p>
+                    </label>
+                </div>
+            </div>
+            <div class="label-email">
+                <label>
+                    Email <span class="obrigatorio">*</span>
+                    <br>
+                    <input onblur="inputEmailVasio()" type="email" class="input-email" required>
+                    <p class="paragrafo-alerta-email">Este campo é obrigatório</p>
+                </label>
+            </div>
+            <div id="div-label-consulta">
+                <label>
+                    Tipo de consulta <span class="obrigatorio">*</span>
+                    <label id="label-consulta" reqired>
+                        <label id="label-inquerito" class="div-input-selecionar">
+                            <input onclick="consultaSelecionada()" id="input-inquerito" required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Inquérito geral</span>
+                        </label>
+                        <label id="label-suporte" class="div-input-selecionar">
+                            <input onclick="consultaSelecionada()" id="input-suporte" required type="radio" name="input-radio" class="input-selecionar"> <span class="tipo-de-consulta">Solicitar suporte</span>
+                        </label>
+                    </label>
+                    <p class="paragrafo-alerta-consulta">Este campo é obrigatório</p>
+                </label>
+            </div>
+            <div  class="div-label-textarea">
+                <label>
+                    Mensagem <span class="obrigatorio">*</span>
+                    <br>
+                    <textarea onblur="inputTextareaVasio()" id="textarea" required></textarea>
+                    <p class="paragrafo-alerta-textarea">Este campo é obrigatório</p>
+                </label>
+            </div>
+            <div>
+                <label class="label-checkbox">
+                    <input onclick="checkboxSelecionado()" required type="checkbox" class="input-aceito-contato"> <p>Aceito ser contactado pela equipe <span class="obrigatorio">*</span></p>
+                </label>
+                <p class="paragrafo-alerta-checkbox">Para enviar este formulário, por favor aceite ser contactado</p>
+            </div>
+            <button type="submit" onclick="verificarTudo()">Enviar</button>
+        </div>
+    </form>
+</body>
+<script src="./scripts.js"></script>
+</html>
